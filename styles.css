@@ -1,0 +1,320 @@
+  /* Styles for light and dark themes */
+  body {
+    transition: background-color 0.3s, color 0.3s;
+
+  }
+
+  #fusionOutput {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--gray-4);
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--gray-1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #fusionOutput #fusionImage {
+    min-width: 288px;
+    height: 288px;
+    /* margin-bottom: 1rem; */
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+  }
+
+  .fusion-details {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .fusion-details div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray-3);
+    padding: 0.5rem 0;
+  }
+
+  .fusion-details div:last-child {
+    border-bottom: none;
+  }
+
+  .fusion-details div span {
+    font-weight: bold;
+  }
+
+
+  .fusion-card {
+    background: var(--card-background-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1000px;
+  }
+  
+  .fusion-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--primary);
+  }
+  
+  .fusion-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .fusion-image {
+    width: 288px;
+    height: 288px;
+    object-fit: contain;
+    background-color: var(--pico-card-sectioning-background-color);
+  }
+  
+  .fusion-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+  
+  .fusion-table th,
+  .fusion-table td {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid var(--card-border-color);
+  }
+  
+  .fusion-table th {
+    background: var(--primary);
+    color: var(--primary-inverse);
+    font-weight: bold;
+  }
+  
+  .fusion-table tbody tr:hover {
+    background: var(--card-sectionning-background-color);
+  }
+  
+  .sprite-info {
+    background: var(--card-sectionning-background-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .sprite-info h3 {
+    margin: 0 0 1rem 0;
+    color: var(--primary);
+  }
+  
+  .fusion-ids {
+    font-size: 1rem;
+    color: var(--muted-color);
+    display: block;
+    margin-top: 0.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .fusion-content {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    
+    .fusion-image-container {
+      flex: 0 0 288px;
+      /* border: 1px solid gray; */
+      border-radius: .5rem;
+      /* padding: 1rem; */
+    }
+    
+    .fusion-info {
+      flex: 1;
+      padding-left: 2rem;
+    }
+  }
+
+
+  #typesElm {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .typeImage {
+    width: 96px;
+    height: 32px;
+    border-radius: 0.5rem;
+  }
+
+  /* Custom Styles for Pokemon Fusion Generator using Pico CSS */
+
+/* Variables (Optional: Match Pico's or define your own) */
+:root {
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: var(--spacing-large);
+}
+
+/* Generator Form */
+#generator h3 {
+  margin-bottom: var(--spacing-medium);
+  font-size: large;
+  text-align: center;
+}
+
+/* Input fields styling (Pico handles most) */
+#fusionForm input[list] {
+  margin-bottom: var(--spacing-medium); /* Ensure spacing below inputs */
+}
+
+/* Button Grid */
+.button-grid {
+  margin-top: var(--spacing-medium);
+  gap: var(--spacing-small); /* Add small gap between buttons */
+}
+
+/* Make buttons take equal width in the grid */
+.button-grid button {
+  width: 100%;
+}
+
+
+/* Fusion Output Card */
+.fusion-card {
+  margin-top: var(--spacing-large);
+  padding: var(--spacing-medium);
+  border: 1px solid var(--pico-card-border-color); /* Use Pico variable */
+  border-radius: var(--pico-card-border-radius); /* Use Pico variable */
+  background-color: var(--pico-card-background-color); /* Use Pico variable */
+}
+
+/* Fusion Card Header */
+.fusion-card header hgroup {
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+}
+
+.fusion-title {
+  margin-bottom: var(--spacing-small); /* Space between name and types */
+}
+
+/* Style for the Pokemon IDs */
+.fusion-ids {
+  font-size: 0.9em;
+  color: var(--pico-muted-color);
+  margin-left: var(--spacing-small);
+  font-weight: normal;
+}
+
+/* Types container */
+.fusion-types {
+  margin-top: var(--spacing-small);
+  /* Add styles for individual type badges here or via JS */
+  /* Example: .type-fire { background-color: #F08030; color: white; padding: 2px 8px; border-radius: 4px; margin: 0 2px; } */
+  min-height: 2em; /* Ensure space even if types aren't loaded yet */
+}
+
+
+/* Layout grid for image and details */
+.fusion-content-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack by default */
+  gap: var(--spacing-medium);
+  align-items: center;
+}
+
+/* Image Container */
+.fusion-image-container {
+  text-align: center; /* Center image within its container */
+}
+
+/* Fusion Image Styling */
+.fusion-image {
+  display: inline-block; /* Allows text-align center to work */
+  max-width: 150px;      /* Adjust size as needed */
+  height: auto;          /* Maintain aspect ratio */
+  margin-bottom: var(--spacing-medium);
+  background-color: var(--pico-form-element-background-color); /* Slight background */
+  border: 1px solid var(--pico-form-element-border-color); /* Subtle border */
+  padding: var(--spacing-small);
+  border-radius: var(--pico-border-radius);
+
+  /* For sharp pixel art sprites */
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: crisp-edges;    /* Chrome, Edge, Opera */
+}
+
+/* Fusion Info section */
+.fusion-info h4 {
+  margin-bottom: var(--spacing-small);
+  text-align: center;
+}
+
+/* Table styling (Pico handles most) */
+.fusion-info table {
+  margin-top: var(--spacing-small);
+  width: 100%; /* Ensure table takes full width of its container */
+}
+.fusion-info th[scope="row"] {
+  width: 30%; /* Give row headers a bit more fixed width */
+}
+
+
+/* About Section */
+#about {
+
+  border: 1px solid gray;
+  padding: 12px;
+  border-radius: 10px;
+}
+#about h3 {
+  text-align: center;
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Footer */
+footer {
+  margin-top: var(--spacing-large);
+  padding-bottom: var(--spacing-medium);
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) { /* Pico's default medium breakpoint */
+  .fusion-content-grid {
+      grid-template-columns: 1fr 1fr; /* Side-by-side on larger screens */
+      align-items: start; /* Align items to the top */
+  }
+
+  .fusion-image-container {
+     text-align: right; /* Align image towards the center split */
+     padding-right: var(--spacing-medium);
+  }
+
+  .fusion-info {
+      text-align: left; /* Align info text left */
+      padding-left: var(--spacing-medium);
+  }
+
+   .fusion-info h4 {
+      text-align: left;
+  }
+
+  .fusion-image {
+    margin-bottom: 0; /* Remove bottom margin when side-by-side */
+    width: 300px; /* Slightly larger image on desktop */
+  }
+
+   /* Adjust button grid for wider screens if desired */
+  /* .button-grid { grid-template-columns: repeat(3, 1fr); } */
+}

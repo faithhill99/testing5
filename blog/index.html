@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- Link to the CSS file -->
+  <link rel="shortcut icon" href="/Fusiongenerato.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav>
+    <div class="logo">
+    <a href="https://fusiongenerato.com/" style="color: black; text-decoration: none;">
+        <strong>FusionGenerato</strong>
+    </a>
+</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="https://fusiongenerato.com/">Home</a></li>
+      <li><a href="/pages/privacy" rel="nofollow">Privacy Policy</a></li>
+      <li><a href="/pages/about" rel="nofollow">About Us</a></li>
+      <li><a href="/pages/contact" rel="nofollow">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('nav ul');
+      menu.classList.toggle('active');
+    }
+  </script>
+<!-- Blog Section -->
+<section id="blog" class="section">
+    <div class="container">
+        <h2><center>Latest Blog Posts</center></h2>
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <div class="blog-post">
+                <h3>The Magic of Pokemon Fusions</h3>
+                <p>Explore the creative world of Pokémon fusions, where fan-made games and stories blend species, sparking innovation and passion in the beloved franchise’s community.</p>
+                <a href="the-magic-of-pokemon-fusions.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer>
+  <div>
+    <!-- Additional Footer Links -->
+    <p>
+      <a href="/pages/about" rel="nofollow">About Us</a> |
+<a href="/pages/contact" rel="nofollow">Contact Us</a> |
+<a href="/pages/privacy" rel="nofollow">Privacy Policy</a> |
+<a href="/pages/terms" rel="nofollow">Terms</a>
+    </p>
+    <!-- Footer Content -->
+    <p>
+      © 2025 FusionGenerato.com. All rights reserved.
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

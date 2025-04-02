@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Primary Meta Tags -->
+    <title>Pokemon Fusion Generator - Create Unique Pokemon Combinations</title>
+    <meta name="title" content="Pokemon Fusion Generator - Create Unique Pokemon Combinations">
+    <meta name="description" content="Unleash your creativity with the Pokemon Fusion Generator! Select two Pokemon and combine their head and body parts to generate unique, never-before-seen hybrid Pokemon sprites. Explore endless fun combinations!">
+    <meta name="keywords" content="Pokemon, Pokemon Fusion, Pokemon Generator, Pokemon Combinations, Pokemon Mix, Pokemon Hybrid, Custom Pokemon, Fan Art Pokemon, Pokemon Sprites, Infinite Fusion">
+
+    <!-- Author and Application Info -->
+    <meta name="author" content="Your Name or Site Name">  
+    <meta name="application-name" content="Pokemon Fusion Generator">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Add_url_there">
+    <meta property="og:title" content="Pokemon Fusion Generator - Create Unique Pokemon Combinations">
+    <meta property="og:description" content="Generate unique Pokemon fusions! Mix and match head and body parts from different Pokemon to see what amazing hybrids you can create.">
+    <meta property="og:image" content="Add_url_there/preview.png">
+    <meta property="og:site_name" content="Pokemon Fusion Generator">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="Add_url_there">
+    <meta property="twitter:title" content="Pokemon Fusion Generator - Create Unique Pokemon Combinations">
+    <meta property="twitter:description" content="Generate unique Pokemon fusions! Mix and match head and body parts from different Pokemon to see what amazing hybrids you can create.">
+    <meta property="twitter:image" content="Add_url_there/preview.png">
+
+
+    <!-- Preconnect to CDN -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="./styles.css"> <!-- Your custom styles -->
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="container page-header">
+    <hgroup>
+      <h1>Pokemon Fusion Generator!</h1>
+      <h2>Create unique hybrid Pokemon sprites</h2>
+    </hgroup>
+    <!-- <p>Ever wondered what Pikachu's head would look like on Charizard's body? Or maybe a fusion of Mewtwo and Magikarp? Use this tool to select two Pokémon and generate a unique fused sprite based on their head and body parts. Have fun exploring thousands of possible combinations!</p> -->
+  </div>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Generator Section -->
+    <section id="generator">
+      <!-- <h3>Select Your Pokemon</h3> -->
+      <form id="fusionForm">
+        <div class="grid">
+          <!-- Input for Head Pokémon -->
+          <label for="HeadPokemon">
+            Head Pokémon:
+            <input list="pokemonList" id="HeadPokemon" name="Head Pokemon" placeholder="e.g., Pikachu" required>
+          </label>
+
+          <!-- Input for Body Pokémon -->
+          <label for="BodyPokemon">
+            Body Pokémon:
+            <input list="pokemonList" id="BodyPokemon" name="Body Pokemon" placeholder="e.g., Charizard" required>
+          </label>
+
+          <!-- Datalist for Pokémon suggestions (populated by JS) -->
+          <datalist id="pokemonList"></datalist>
+        </div>
+
+        <!-- Buttons -->
+        <!-- Using Pico Grid for button layout is often cleaner than inline flex -->
+        <div class="grid button-grid">
+          <button type="reset" id="resetButton" onclick="resetForm()" class="secondary">Reset</button>
+          <button type="button" id="randomButton" class="contrast">Random</button>
+          <button type="button" id="generateButton" class="primary">Generate Fusion</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Output Section -->
+    <section id="results" aria-live="polite">
+        <!-- The output article will be displayed here by JS -->
+        <article id="fusionOutput" style="display: none;" class="fusion-card" aria-labelledby="fusionName">
+            <header>
+                <hgroup>
+                    <h3 id="fusionName" class="fusion-title">
+                        <!-- Fusion Name Populated by JS -->
+                        <span class="fusion-ids"></span> <!-- IDs populated by JS -->
+                    </h3>
+                    <div id="typesElm" class="fusion-types">
+                        <!-- Types Populated by JS -->
+                    </div>
+                </hgroup>
+            </header>
+
+            <div class="fusion-content-grid">
+                <div class="fusion-image-container">
+                     <!-- Consider updating alt text dynamically in JS for better accessibility -->
+                    <img id="fusionImage" src="" alt="Generated Pokemon Fusion Sprite" class="fusion-image">
+                </div>
+
+                <div class="fusion-info">
+                    <h4>Fusion Details:</h4>
+                    <figure>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col">Part</th>
+                            <th scope="col">Original Pokémon</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Head</th>
+                            <td id="headPokemonDetails"></td> <!-- Details populated by JS -->
+                          </tr>
+                          <tr>
+                            <th scope="row">Body</th>
+                            <td id="bodyPokemonDetails"></td> <!-- Details populated by JS -->
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                </div>
+            </div> <!-- /.fusion-content-grid -->
+        </article>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+    
+        <h3>About This Tool</h3>
+        <p>This Pokemon Fusion Generator lets you combine the sprites of two different Pokémon, taking the head from the first and the body from the second. It's inspired by the popular fan-made game concept, Pokemon Infinite Fusion, allowing for creative and often hilarious results.</p>
+        <p>Simply type the names of the two Pokémon you want to fuse into the input fields above (suggestions will appear as you type), or use the "Random" button for a surprise! Click "Generate Fusion" to see your creation.</p>
+         <small>Disclaimer: Pokémon and Pokémon character names are trademarks of Nintendo, Creatures Inc., and GAME FREAK inc. This is an unofficial fan project created for entertainment purposes only.</small>
+    </section>
+
+  </main>
+
+  
+
+  <!-- Scripts -->
+  <script src="./main.js"></script>
+  <!-- The inline script for modifying generateFusion is still needed if not moved to main.js -->
+   <script>
+      // Ensure this runs after main.js defines generateFusion and splitted_names
+      // Consider moving this logic into main.js for better organization
+      if (typeof generateFusion === 'function' && typeof splitted_names !== 'undefined') {
+          const originalGenerateFusion = window.generateFusion;
+
+          window.generateFusion = function() {
+              // Call the original function first to generate name, image, etc.
+              originalGenerateFusion();
+
+              // Find indices AFTER the inputs might have been populated/validated
+              const headInput = document.getElementById("HeadPokemon").value;
+              const bodyInput = document.getElementById("BodyPokemon").value;
+
+              // Using the original code's assumption about splitted_names:
+              const headIndex = splitted_names.findIndex(nameArr => nameArr.join('').toLowerCase() === headInput.toLowerCase());
+              const bodyIndex = splitted_names.findIndex(nameArr => nameArr.join('').toLowerCase() === bodyInput.toLowerCase());
+
+
+              const fusionTitle = document.getElementById("fusionName");
+              const idsSpan = fusionTitle.querySelector('.fusion-ids') || document.createElement('span');
+              idsSpan.className = 'fusion-ids'; // Ensure class is set
+
+              // Add 1 to index for conventional Pokemon numbering (1-based)
+              const headNum = headIndex !== -1 ? headIndex + 1 : '?';
+              const bodyNum = bodyIndex !== -1 ? bodyIndex + 1 : '?';
+
+              idsSpan.textContent = `#${headNum} × #${bodyNum}`;
+
+              // Make sure the span is appended if it wasn't there before
+              if (!fusionTitle.querySelector('.fusion-ids')) {
+                 fusionTitle.appendChild(document.createTextNode(' ')); // Add space before IDs
+                 fusionTitle.appendChild(idsSpan);
+              }
+
+              // Optional: Update image alt text dynamically
+              const fusionImage = document.getElementById("fusionImage");
+              if (headInput && bodyInput) {
+                fusionImage.alt = `Fusion of ${headInput} head and ${bodyInput} body`;
+              } else {
+                fusionImage.alt = "Generated Pokemon Fusion Sprite";
+              }
+          };
+      } else {
+          console.error("generateFusion function or splitted_names not found. Ensure main.js is loaded correctly and defines these.");
+      }
+
+      // Simple reset function if not already in main.js
+      function resetForm() {
+        document.getElementById('fusionForm').reset();
+        document.getElementById('fusionOutput').style.display = 'none';
+        // Clear specific output fields if needed
+        document.getElementById('fusionName').textContent = '';
+        document.getElementById('fusionImage').src = '';
+        document.getElementById('headPokemonDetails').textContent = '';
+        document.getElementById('bodyPokemonDetails').textContent = '';
+        document.getElementById('typesElm').innerHTML = '';
+        const idsSpan = document.querySelector('.fusion-ids');
+        if (idsSpan) idsSpan.textContent = '';
+      }
+   </script>
+</body>
+
+</html>

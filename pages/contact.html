@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact US</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body class="app">
+    <header>
+  <nav>
+    <div class="logo">FusionGenerato</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="https://fusiongenerato.com/">Home</a></li>
+      <li><a href="/pages/privacy" rel="nofollow">Privacy Policy</a></li>
+      <li><a href="/pages/about" rel="nofollow">About Us</a></li>
+      <li><a href="/pages/contact" rel="nofollow">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('nav ul');
+      menu.classList.toggle('active');
+    }
+  </script>
+  </header>
+
+    <article>
+    <main>
+        <center><h1>Contact Us</h1></center>
+        <hr />
+      <div class="article-container">
+      
+        <section>
+          <h2>Email</h2>
+          <hr />
+          <p>
+            For any inquiries or feedback, please feel free to contact us via email at <a href="mailto:fusiongenhelp@gmail.com">fusiongenhelp@gmail.com</a>.
+          </p>
+        </section>
+      
+        <section>
+          <h2>Contact Form</h2>
+          <hr />
+          <form id="contactForm">
+            <div>
+              <label>Name:</label>
+              <input id="name" name="name" required="" type="text" />
+            </div>
+            <div>
+              <label>Email:</label>
+              <input id="email" name="email" required="" type="email" />
+            </div>
+            <div>
+              <label>Message:</label>
+              <textarea id="message" name="message" required="" rows="5"></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+      </main>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const form = document.getElementById("contactForm");
+      
+          form.addEventListener("submit", function(event) {
+            event.preventDefault();
+      
+            // Simple validation
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+      
+            if (!name || !email || !message) {
+              alert("Please fill out all fields.");
+              return;
+            }
+      
+            // Send email using mailto
+            const mailtoLink = `mailto:fusiongenhelp@gmail.com?subject=Message%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
+            window.location.href = mailtoLink;
+          });
+        });
+      </script>
+      
+  </article>
+  
+  <footer>
+  <div>
+    <!-- Additional Footer Links -->
+    <p>
+      <a href="/pages/about" rel="nofollow">About Us</a> |
+<a href="/pages/contact" rel="nofollow">Contact Us</a> |
+<a href="/pages/privacy" rel="nofollow">Privacy Policy</a> |
+<a href="/pages/terms" rel="nofollow">Terms of Service</a>
+    </p>
+    <!-- Footer Content -->
+    <p>
+      © 2025 FusionGenerato.com. All rights reserved.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
