@@ -262,6 +262,21 @@ nav ul li a:hover {
   width: 100%;
 }
 
+#resetButton {
+    background-color: #C52F21 !important; 
+    color: white !important;
+}
+
+#randomButton {
+    background-color: #802E90 !important; /* Yellow */
+    color: white !important;
+}
+
+#generateButton {
+    background: #398712 !important; /* Green Gradient */
+    color: white !important;
+}
+
 
 /* Fusion Output Card */
 .fusion-card {
