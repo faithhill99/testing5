@@ -43,6 +43,31 @@
     <link rel="stylesheet" href="./styles.css"> <!-- Your custom styles -->
 </head>
 
+    <nav>
+    <div class="logo">
+    <a href="https://fusiongenerato.com/" style="color: black; text-decoration: none;">FusionGenerato</a>
+</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="https://fusiongenerato.com/">Home</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/pages/privacy" rel="nofollow">Privacy Policy</a></li>
+      <li><a href="/pages/about" rel="nofollow">About Us</a></li>
+      <li><a href="/pages/contact" rel="nofollow">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('nav ul');
+      menu.classList.toggle('active');
+    }
+  </script>
+
 <body>
   <!-- Header -->
   <div class="container page-header">
@@ -146,7 +171,35 @@
 
   </main>
 
-  
+    <section class="blog-posts-section">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-posts-grid">
+            <div class="blog-post">
+                
+                <div>
+                    <h3>The Magic of Pokémon Fusions</h3>
+                    <p>Explore Pokémon fusions, where fans blend species into creative games and stories.</p>
+                    <a href="blog/the-magic-of-pokemon-fusions.html">Read more...</a>
+                </div>
+        </div>
+    </section>
+
+  <footer>
+  <div>
+    <!-- Additional Footer Links -->
+    <p>
+      <a href="/pages/about" rel="nofollow">About Us</a> |
+<a href="/pages/contact" rel="nofollow">Contact Us</a> |
+<a href="/pages/privacy" rel="nofollow">Privacy Policy</a> |
+<a href="/pages/terms" rel="nofollow">Terms</a> |
+<a href="/pages/disclaimer" rel="nofollow">Disclaimer</a>
+    </p>
+    <!-- Footer Content -->
+    <p>
+      © 2025 FusionGenerato.com. All rights reserved.
+    </p>
+  </div>
+</footer>
 
   <!-- Scripts -->
   <script src="./main.js"></script>
