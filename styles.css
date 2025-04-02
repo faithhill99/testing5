@@ -243,7 +243,6 @@ nav ul li a:hover {
 /* Generator Form */
 #generator h3 {
   margin-bottom: var(--spacing-medium);
-  font-size: large;
   text-align: center;
 }
 
