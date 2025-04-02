@@ -165,10 +165,11 @@ nav ul li a:hover {
   }
   
   .fusion-table th {
-    background: #398712; 
-    color: white; 
+    background: #398712 !important; 
+    color: white !important; 
     font-weight: bold;
-}
+ }
+
   
   .fusion-table tbody tr:hover {
     background: var(--card-sectionning-background-color);
