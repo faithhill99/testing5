@@ -353,7 +353,7 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 #about h3 {
-  text-align: justify;
+  text-align: normal;
   margin-bottom: var(--spacing-medium);
 }
 
