@@ -390,17 +390,73 @@ nav ul li a:hover {
   width: 30%; /* Give row headers a bit more fixed width */
 }
 
-
-/* About Section */
-#about {
-
-  border: 1px solid gray;
-  padding: 12px;
-  border-radius: 10px;
+/* Card Styling */
+.card {
+  background-color: var(--pico-card-background-color);
+  border: 1px solid var(--pico-card-border-color);
+  box-shadow: var(--pico-card-box-shadow);
+  border-radius: var(--pico-border-radius);
+  padding: var(--pico-spacing);
+  margin-bottom: var(--pico-block-spacing-vertical);
 }
-#about h3 {
-  text-align: normal;
-  margin-bottom: var(--spacing-medium);
+
+/* Spacing Utility */
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+table {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+}
+
+/* Headings Styling */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
+  line-height: var(--pico-line-height);
+  font-family: var(--pico-font-family);
+}
+
+h1 {
+  --pico-color: var(--pico-h1-color);
+  font-size: 2rem;
+  line-height: 1.125;
+  text-align: center; /* Centered heading */
+}
+
+h2 {
+  --pico-color: var(--pico-h2-color);
+  font-size: 1.75rem;
+  line-height: 1.15;
+}
+
+h3 {
+  --pico-color: var(--pico-h3-color);
+  font-size: 1.5rem;
+  line-height: 1.175;
+}
+
+h4 {
+  --pico-color: var(--pico-h4-color);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+h5 {
+  --pico-color: var(--pico-h5-color);
+  font-size: 1.125rem;
+  line-height: 1.225;
+}
+
+h6 {
+  --pico-color: var(--pico-h6-color);
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
 .blog-posts-section {
