@@ -390,6 +390,109 @@ nav ul li a:hover {
   width: 30%; /* Give row headers a bit more fixed width */
 }
 
+/* Responsive Font Sizes */
+@media (min-width: 576px) {
+  :root {
+    --pico-font-size: 106.25%;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --pico-font-size: 112.5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --pico-font-size: 118.75%;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --pico-font-size: 125%;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --pico-font-size: 131.25%;
+  }
+}
+
+/* Link Styling */
+a {
+  --pico-text-decoration: underline;
+}
+
+a.secondary,
+a.contrast {
+  --pico-text-decoration: underline;
+}
+
+/* Small Text */
+small {
+  font-size: 0.75em;
+}
+
+/* Headings: Base Styling */
+h1, h2, h3, h4, h5, h6 {
+  --pico-font-weight: 400;
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  font-family: var(--pico-font-family);
+  font-weight: var(--pico-font-weight);
+}
+
+/* Headings: Specific Sizes and Line Heights */
+h1 {
+  --pico-font-size: 2rem;
+  --pico-line-height: 1.125;
+  --pico-typography-spacing-top: 3rem;
+  text-align: center;
+}
+
+h2 {
+  --pico-font-size: 1.75rem;
+  --pico-line-height: 1.15;
+  --pico-typography-spacing-top: 2.625rem;
+}
+
+h3 {
+  --pico-font-size: 1.5rem;
+  --pico-line-height: 1.175;
+  --pico-typography-spacing-top: 2.25rem;
+}
+
+h4 {
+  --pico-font-size: 1.25rem;
+  --pico-line-height: 1.2;
+  --pico-typography-spacing-top: 1.874rem;
+}
+
+h5 {
+  --pico-font-size: 1.125rem;
+  --pico-line-height: 1.225;
+  --pico-typography-spacing-top: 1.6875rem;
+}
+
+h6 {
+  --pico-font-size: 1rem;
+  --pico-line-height: 1.25;
+  --pico-typography-spacing-top: 1.5rem;
+}
+
+/* Paragraph and Text Block Spacing */
+p {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  line-height: 1.75;
+  font-size: 1rem;
+  color: var(--pico-color);
+  font-family: var(--pico-font-family);
+}
+
 /* Card Styling */
 .card {
   background-color: var(--pico-card-background-color);
@@ -398,65 +501,10 @@ nav ul li a:hover {
   border-radius: var(--pico-border-radius);
   padding: var(--pico-spacing);
   margin-bottom: var(--pico-block-spacing-vertical);
-}
-
-/* Spacing Utility */
-p,
-ul,
-ol,
-dl,
-blockquote,
-pre,
-table {
-  margin-top: 0;
-  margin-bottom: var(--pico-typography-spacing-vertical);
-}
-
-/* Headings Styling */
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: var(--pico-typography-spacing-vertical);
-  font-weight: var(--pico-font-weight);
-  font-size: var(--pico-font-size);
-  line-height: var(--pico-line-height);
-  font-family: var(--pico-font-family);
-}
-
-h1 {
-  --pico-color: var(--pico-h1-color);
-  font-size: 2rem;
-  line-height: 1.125;
-  text-align: center; /* Centered heading */
-}
-
-h2 {
-  --pico-color: var(--pico-h2-color);
-  font-size: 1.75rem;
-  line-height: 1.15;
-}
-
-h3 {
-  --pico-color: var(--pico-h3-color);
-  font-size: 1.5rem;
-  line-height: 1.175;
-}
-
-h4 {
-  --pico-color: var(--pico-h4-color);
-  font-size: 1.25rem;
-  line-height: 1.2;
-}
-
-h5 {
-  --pico-color: var(--pico-h5-color);
-  font-size: 1.125rem;
-  line-height: 1.225;
-}
-
-h6 {
-  --pico-color: var(--pico-h6-color);
+  line-height: 1.6;
   font-size: 1rem;
-  line-height: 1.25;
+  color: var(--pico-color);
+  font-family: var(--pico-font-family);
 }
 
 .blog-posts-section {
