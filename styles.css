@@ -235,18 +235,6 @@ nav ul li a:hover {
   --spacing-large: 1.5rem;
 }
 
-/* Page Header */
-.page-header {
-  text-align: center;
-  margin-bottom: var(--spacing-large);
-}
-
-/* Generator Form */
-#generator h3 {
-  margin-bottom: var(--spacing-medium);
-  text-align: center;
-}
-
 /* Input fields styling (Pico handles most) */
 #fusionForm input[list] {
   margin-bottom: var(--spacing-medium); /* Ensure spacing below inputs */
